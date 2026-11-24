@@ -39,9 +39,21 @@ Current version: **1.0.3**
 
 It's a first screen, not a guarantee. If a skill will touch client or regulated data, get a full review from a qualified security professional.
 
-## Is this the real file?
+## Is this the real file? (1 minute)
 
-Check the fingerprint (SHA-256) before you use it. On Windows, in PowerShell: `Get-FileHash .\skill-doorway-check-v1.0.3.zip`
+1. Download the zip into your **Downloads** folder and **leave it there**. Don't move, rename or delete it until you've checked it and added it to your AI.
+2. **Windows:** press the Windows key, type `PowerShell` and press Enter. Then copy and paste this line and press Enter:
+   ```powershell
+   Get-FileHash "$env:USERPROFILE\Downloads\skill-doorway-check-v1.0.3.zip"
+   ```
+   **Mac:** open Terminal, then copy and paste this line and press Return:
+   ```
+   shasum -a 256 ~/Downloads/skill-doorway-check-v1.0.3.zip
+   ```
+3. The long code it shows must match the one in the table below. It should start with `95ABD668D97C` (capital or small letters don't matter). **If it doesn't match, don't use the file.**
+4. If Windows says **"Cannot find path"**, the file isn't in Downloads under that exact name. Your browser may have saved it somewhere else, or added "(1)" to the name. Put it back in Downloads with the exact name, then try again.
+
+For the instructions file, use the same command with `Skill-Doorway-Check_Instructions_v1.0.3.txt` in place of the zip's name.
 
 | File | SHA-256 |
 |---|---|
